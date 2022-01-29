@@ -1,0 +1,12 @@
+<app-header (toggleSidebarForMe)="sidebarToggle()" *ngIf="router.url !== '/404'"></app-header>
+<section id="layoutSidenav">
+    <div id="layoutSidenav_nav" [class.menu-open]="sideBarOpen" *ngIf="router.url !== '/404'">
+        <app-sidebar></app-sidebar>
+    </div>
+    
+    <div id="layoutSidenav_content">
+        <router-outlet></router-outlet>
+        <app-footer *ngIf="router.url !== '/404'"></app-footer>
+    </div>
+</section>
+

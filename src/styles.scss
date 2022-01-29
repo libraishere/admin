@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --body-text-color:#202020;
+  --body-bg:#f6f6f6;
+  --primary: #1933b7;
+  --white: #ffffff;
+
+  --secondary: #040f41;
+
+  --dark-text:#333333;
+  --dark-alpha-text:rgba(0,0,0,0.5);
+
+  --primary-light: #76CBD4;
+  --greenColor:#4AD991;
+
+  --white-bg: #ffffff;
+  --bg-alpha-white:rgba(255,255,255,0.5);
+}
+
+@mixin topnav($zIndex) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zIndex;
+}
+
+html, body {
+  height: 100%;
+}
+body{font-family: 'Open Sans', sans-serif; font-size: 15px; color: var(--body-text-color); background: var(--body-bg);}
+img{max-width: 100%;}
+a{color: var(--primary); transition: all 0.5s ease;
+    &:hover{text-decoration: none;}
+}
+
+.custom-select{background: #fff url(assets/images/select-down.svg) no-repeat right 5px center/12px 49px;}
+ .form-control{border-color: #D7DAE2; color: var(--dark-text); font-size: 0.8125rem; height: 45px;}
+  @media all and (min-width:575px){
+    .rowChildHeight > div{overflow: auto;}
+  }
+
+  .btn {font-size: .875rem; min-width: 130px;}
+
+  .btn:not(:disabled):not(.disabled):active:focus, 
+  .btn:not(:disabled):not(.disabled).active:focus, 
+  .show > .btn.dropdown-toggle:focus,
+  .form-control:focus {
+    box-shadow: none;
+  }
+
+  .btn-primary, .btn-primary:hover, 
+  .btn-primary:focus, .btn-primary.focus,
+  .btn-primary.disabled, .btn-primary:disabled {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }  
+  
+  .btn-secondary, .btn-secondary:hover,
+  .btn-secondary:focus, .btn-secondary.focus,
+  .btn-secondary.disabled, .btn-secondary:disabled {
+    color: var(--white);
+    background-color: var(--secondary);
+    border-color:  var(--secondary);
+  }
+
+  .btn:hover{opacity: 0.8;}
+
+  .sb-nav-fixed {
+    .sb-topnav {
+      @include topnav(1039);
+    }
+  }
+
+.sb-nav-fixed {
+  #layoutSidenav{
+    #layoutSidenav_nav {
+      @include topnav(1030);
+    }
+  }    
+}
+
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: .875em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+
+#layoutSidenav {
+  display: flex;
+  #layoutSidenav_nav {
+    flex-basis: 225px;
+    flex-shrink: 0;
+    transition: transform 0.15s ease-in-out;
+    z-index: 1038;
+    transform: translateX(0);
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+        z-index: 1037;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;      
+    }
+    &.menu-open{
+      transform: translateX(-225px);    
+      &:after{display: none;}  
+    }
+  }
+  #layoutSidenav_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    flex-grow: 1;
+    min-height: calc(100vh - 80px);
+    margin-left: -225px;
+  }
+}
+
+.sb-nav-fixed {
+  #layoutSidenav {
+    #layoutSidenav_content {
+      top: 80px;
+      padding-left: 225px;
+    }
+    #layoutSidenav_nav {
+      width: 225px;
+      height: 100vh;
+    }
+    
+  }
+}
+
+
+@media (min-width: 992px){
+  #layoutSidenav {
+    
+    #layoutSidenav_nav {
+      transform: translateX(-225px);
+      &::after{display: none;}
+      &.menu-open{
+        transform: translateX(0);
+      }     
+    }   
+  }
+  #layoutSidenav_nav.menu-open + #layoutSidenav_content {
+    margin-left: 0;
+    transition: margin 0.15s ease-in-out;
+  }
+}
+
+.page-breadcrumb {
+  padding: 13px 25px;
+  background-color: var(--bg-alpha-white);
+  .page-title {
+      margin-bottom: 0px;
+      font-weight: 700;
+  }
+}
+
+main {
+  .container-fluid {
+    padding: 25px;
+  }
+}
+.boxTitleWidget{padding: 1rem;}
+.table-responsive > .table-bordered {
+  border-top: 1px solid #dee2e6;
+}
+h4.boxTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.shadowBox {
+  box-shadow: 0px 2px 6px #0000000a;
+  background: #fff;
+}
+.boxBody {
+  padding: 1rem;
+}
+
+router-outlet:empty{display: none;}
