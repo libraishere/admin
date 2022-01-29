@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  userId: any;
+  id: any;
+  title:any;
+  desc:any;
+  data: any = [];
+  p: number = 1;
 
   tableData = [
     {
@@ -52,9 +59,21 @@ export class DashboardComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(private http: HttpClient) { 
+    
+  }
 
   ngOnInit(): void {
+    this.getData();
+    // this.userId = userId;
   }
+
+  getData() {
+    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(res => {
+      this.data = res;
+      console.log('data response', this.data);
+    });
+  }
+  
 
 }

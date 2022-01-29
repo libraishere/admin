@@ -273,7 +273,40 @@
                             </table>
                         </div>
                     </div>
+                   
+                </div>
+            </div>
+
+            <div class="col-md-12 my-4">
+                <div class="shadowBox">
+                    <div class="boxTitleWidget d-flex justify-content-between align-content-center">
+                        <h4 class="boxTitle">Table with API Data</h4>
+                    </div>
                     
+                    <div class="boxBody">
+                        <div class="table-responsive">
+                            <table class="table table-stripped">
+                                <thead>
+                                    <tr>
+                                        <th class="border-top-0">#</th>
+                                        <th class="border-top-0 text-nowrap">User Id</th>
+                                        <th class="border-top-0">Title</th>
+                                        <th class="border-top-0">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                      <tr *ngFor="let item of data  | paginate: { itemsPerPage: 10, currentPage: p }">
+                                          <td>{{item.id}}</td>
+                                          <td>{{item.userId}}</td>
+                                          <td>{{item.title}}</td>
+                                          <td>{{item.body}}</td>
+                                      </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                   
                 </div>
             </div>
 
