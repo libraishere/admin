@@ -1,0 +1,9 @@
+.userBG{height: 230px; overflow: hidden; position: relative;}
+.userBG > img{width: 100%; height: 100%; object-fit: cover;}
+.userBG .overlayDiv { background: var(--secondary); opacity: 0.9; position: absolute; top: 0;
+  left: 0; right: 0; height: 100%; text-align: center;}
+.userBG .overlayDiv .userContent {padding: 15px; margin-top: 30px;}
+.userBG .overlayDiv .userContent .profilePic{width: 88px; height: 88px; border-radius: 50%; }
+.userBG .overlayDiv .userContent .title{font-weight: 600; color: var(--white);}
+.userBG .overlayDiv .userContent h4{font-size: 18px;}
+.userBG .overlayDiv .userContent h5{font-size: 14px;}

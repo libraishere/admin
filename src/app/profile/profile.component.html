@@ -1,0 +1,27 @@
+<main>
+    <div class="page-breadcrumb bg-alpha-white">
+        <h4 class="page-title">Profile</h4>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-xlg-3 col-md-12">
+                <div class="shadowBox">
+                    <app-imagepanel></app-imagepanel>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-xlg-9 col-md-12">
+                <div class="shadowBox boxBody position-relative">
+                    <a routerLink="/editprofile" class="editProfileLink">Edit Profile</a>
+                    <div class="userInfoWidget">
+                        <div *ngFor="let data of profileData" class="userInfoRow d-md-flex flex-wrap justify-content-between align-items-center">
+                            <label>{{data.label}}</label>
+                            <div class="userInfoValue">{{data.value}}</div>
+                        </div>                        
+                    </div>
+                </div>         
+            </div>
+        </div>
+    </div>
+</main>

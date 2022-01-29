@@ -1,0 +1,239 @@
+<main>
+    <div class="page-breadcrumb bg-alpha-white">
+        <h4 class="page-title">Table</h4>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="my-4">
+            <div class="shadowBox">
+                <div class="boxTitleWidget d-flex justify-content-between align-content-center"><h4 class="boxTitle flex-grow-1 mb-0">Simple Table</h4></div>
+                
+                    <div class="boxBody">
+                        <div class="table-responsive">
+                            <table class="table text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th class="border-top-0">#</th>
+                                        <th class="border-top-0">First Name</th>
+                                        <th class="border-top-0">Last Name</th>
+                                        <th class="border-top-0">Username</th>
+                                        <th class="border-top-0">Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of tableData">
+                                        <td>{{data.sno}}</td>
+                                        <td>{{data.firstname}}</td>
+                                        <td>{{data.lastname}}</td>
+                                        <td>{{data.username}}</td>
+                                        <td>{{data.role}}</td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            </div>
+        </div><!--//Simple Table-->
+
+        <div class="my-4">
+            <div class="shadowBox">
+                <div class="boxTitleWidget d-flex justify-content-between align-content-center">
+                    <h4 class="boxTitle mb-0 flex-grow-1">Simple Table with hover &amp; Striped rows</h4>
+                </div>
+                
+                    <div class="boxBody">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="border-top-0">#</th>
+                                        <th class="border-top-0">First Name</th>
+                                        <th class="border-top-0">Last Name</th>
+                                        <th class="border-top-0">Username</th>
+                                        <th class="border-top-0">Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of tableData">
+                                        <td>{{data.sno}}</td>
+                                        <td>{{data.firstname}}</td>
+                                        <td>{{data.lastname}}</td>
+                                        <td>{{data.username}}</td>
+                                        <td>{{data.role}}</td>
+                                    </tr>  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                
+            </div>
+        </div><!--//Simple Table with hover & Striped rows-->
+
+        <div class="my-4">
+            <div class="shadowBox">
+                <div class="boxTitleWidget d-flex justify-content-between align-content-center">
+                    <h4 class="boxTitle mb-0 flex-grow-1">Simple Table with Border</h4>
+                </div>
+                
+                    <div class="boxBody">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="border-top-0">#</th>
+                                        <th class="border-top-0">First Name</th>
+                                        <th class="border-top-0">Last Name</th>
+                                        <th class="border-top-0">Username</th>
+                                        <th class="border-top-0">Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of tableData">
+                                        <td>{{data.sno}}</td>
+                                        <td>{{data.firstname}}</td>
+                                        <td>{{data.lastname}}</td>
+                                        <td>{{data.username}}</td>
+                                        <td>{{data.role}}</td>
+                                    </tr>  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                
+            </div>
+        </div><!--//Simple Table with Border-->
+
+        <div class="my-4">
+            <div class="shadowBox">
+                <div class="boxTitleWidget d-flex justify-content-between align-content-center">
+                    <h4 class="boxTitle mb-0 flex-grow-1">Dark Table</h4>
+                </div>
+                
+                <div class="boxBody">
+                    <div class="table-responsive">
+                        <table class="table text-nowrap table-dark">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">#</th>
+                                    <th class="border-top-0">First Name</th>
+                                    <th class="border-top-0">Last Name</th>
+                                    <th class="border-top-0">Username</th>
+                                    <th class="border-top-0">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of tableData">
+                                    <td>{{data.sno}}</td>
+                                    <td>{{data.firstname}}</td>
+                                    <td>{{data.lastname}}</td>
+                                    <td>{{data.username}}</td>
+                                    <td>{{data.role}}</td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><!--//Dark Table-->
+
+        <div class="my-4">
+            <div class="shadowBox">
+                <div class="boxTitleWidget d-flex justify-content-between align-content-center">
+                    <h4 class="boxTitle mb-0 flex-grow-1">Dark Table with hover &amp; Striped rows</h4>
+                </div>
+                
+                <div class="boxBody">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-dark">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">#</th>
+                                    <th class="border-top-0">First Name</th>
+                                    <th class="border-top-0">Last Name</th>
+                                    <th class="border-top-0">Username</th>
+                                    <th class="border-top-0">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of tableData">
+                                    <td>{{data.sno}}</td>
+                                    <td>{{data.firstname}}</td>
+                                    <td>{{data.lastname}}</td>
+                                    <td>{{data.username}}</td>
+                                    <td>{{data.role}}</td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><!--//Dark Table with hover & Striped rows-->
+
+        <div class="my-4">
+            <div class="shadowBox">
+                <div class="boxTitleWidget d-flex justify-content-between align-content-center">
+                    <h4 class="boxTitle mb-0 flex-grow-1">Dark Table with Border</h4>
+                </div>
+                
+                <div class="boxBody">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-dark">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0">#</th>
+                                    <th class="border-top-0">First Name</th>
+                                    <th class="border-top-0">Last Name</th>
+                                    <th class="border-top-0">Username</th>
+                                    <th class="border-top-0">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of tableData">
+                                    <td>{{data.sno}}</td>
+                                    <td>{{data.firstname}}</td>
+                                    <td>{{data.lastname}}</td>
+                                    <td>{{data.username}}</td>
+                                    <td>{{data.role}}</td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><!--//Dark Table with hover & Striped rows-->
+
+        <div class="my-4">
+            <div class="shadowBox">
+                <div class="boxTitleWidget d-flex justify-content-between align-content-center">
+                    <h4 class="boxTitle mb-0 flex-grow-1">Table with Dark Header</h4>
+                </div>
+                
+                <div class="boxBody" id="collapseCard5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="border-top-0">#</th>
+                                    <th class="border-top-0">First Name</th>
+                                    <th class="border-top-0">Last Name</th>
+                                    <th class="border-top-0">Username</th>
+                                    <th class="border-top-0">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of tableData">
+                                    <td>{{data.sno}}</td>
+                                    <td>{{data.firstname}}</td>
+                                    <td>{{data.lastname}}</td>
+                                    <td>{{data.username}}</td>
+                                    <td>{{data.role}}</td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><!--//thead-dark Table-->
+
+    </div>
+</main>

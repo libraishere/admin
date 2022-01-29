@@ -1,0 +1,47 @@
+<main>
+    <div class="page-breadcrumb bg-alpha-white">
+        <h4 class="page-title">Profile</h4>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-xlg-3 col-md-12">
+                <app-imagepanel></app-imagepanel>
+            </div>
+
+            <div class="col-lg-8 col-xlg-9 col-md-12">
+                <div class="shadowBox boxBody position-relative">
+                    <a routerLink="/profile" class="editProfileLink">Back to Profile</a>
+                    <div class="userInfoWidget editProfileWidget">
+                        <div class="userInfoRow d-md-flex flex-wrap justify-content-between align-items-center">
+                            <label>Full Name</label>
+                            <div class="userInfoValue"><input type="text" name="" id="" value="Erica Rowan" class="form-control"></div>
+                        </div>
+                        <div class="userInfoRow d-md-flex flex-wrap justify-content-between align-items-center">
+                            <label>Email</label>
+                            <div class="userInfoValue"><input type="text" name="" id="" value="info@myadmin.com" class="form-control"></div>
+                        </div>
+                        <div class="userInfoRow d-md-flex flex-wrap justify-content-between align-items-center">
+                            <label>Mobile</label>
+                            <div class="userInfoValue"><input type="text" name="" id="" value="+1 234 768 3453" class="form-control"></div>
+                        </div>
+                        <div class="userInfoRow d-md-flex flex-wrap justify-content-between align-items-center">
+                            <label>Country</label>
+                            <div class="userInfoValue"><select class="form-control">
+                                <option>--Select your Country--</option>
+                                <option>India</option>
+                                <option>Sri Lanka</option>
+                                <option>USA</option>
+                            </select></div>
+                        </div>
+                        <div class="userInfoRow d-md-flex flex-wrap justify-content-between align-items-center textAreaRow">
+                            <label>Address</label>										
+                            <div class="userInfoValue"><textarea name="" id="" cols="30" rows="10" class="form-control">1595 Dunlevie Rd, Allenhurst, Georgia(GA), 31301</textarea></div>
+                        </div>
+                    </div>
+                    <p class="text-right"><button type="submit" class="btn btn-primary">Save</button></p>
+                </div>         
+            </div>
+        </div>
+    </div>
+</main>
